@@ -25,14 +25,9 @@ class Blog {
     $output = '';
     ob_start();
     ?>
-      <dl>
-        <dt>Article no.</dt>
-        <dd><?php echo $this->id; ?></dd>
-        <dt>Title</dt>
-        <dd><?php echo $this->title; ?></dd>
-        <dt>Content</dt>
-        <dd><?php echo $this->content; ?></dd>
-      </dl>
+          <?php echo $this->id; ?>.
+          <strong><?php echo $this->title; ?>:</strong>
+          <?php echo $this->content; ?>
     <?php
     $output = ob_get_clean();
     if ( $echo === TRUE ) echo $output;
